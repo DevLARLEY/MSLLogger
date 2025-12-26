@@ -4,6 +4,7 @@
 // @version      0.1
 // @description  Decrypts Netflix MSL messages and logs them
 // @author       DevLARLEY
+// @license      CC BY-NC-ND 4.0
 // @noframes
 // @match        *://*/*
 // @run-at       document-start
