@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MSL Logger
 // @namespace    http://greasyfork.org/
-// @version      0.1
+// @version      0.1.1
 // @description  Decrypts Netflix MSL messages and logs them
 // @author       DevLARLEY
 // @license      CC BY-NC-ND 4.0
@@ -157,6 +157,8 @@
                 const stream = new Blob([appData]).stream().pipeThrough(ds);
                 const buffer = await new Response(stream).arrayBuffer();
                 appData = decode.utf8(new Uint8Array(buffer));
+            } else {
+                appData = decode.utf8(appData);
             }
 
             parts.push(appData);
